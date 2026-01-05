@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: #1e1e2f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 1000;
+}
+.sidebar-socials {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.social-btn {
+    display: block;
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+
+.social-btn.github {
+    background: #24292e;
+    color: #fff;
+}
+
+.social-btn.github:hover {
+    background: #000;
+}
+
+
+.social-btn.linkedin {
+    background: #0a66c2;
+    color: #fff;
+}
+
+.social-btn.linkedin:hover {
+    background: #004182;
+}
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo-mark {
+    color: #4fd1c5;
+    margin-right: 0.4rem;
+}
+
+
+.sidebar {
+    display: none;
+}
+
+
+.right-sidebar {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 260px;
+    height: calc(100vh - 70px);
+    background: #ffffff;
+    border-left: 1px solid #ddd;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.right-sidebar h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #1e1e2f;
+}
+
+
+.right-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.right-sidebar nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.right-sidebar nav a:hover {
+    background: #1e1e2f;
+    color: #fff;
+}
+
+
+main {
+    margin-top: 70px;
+    margin-right: 260px;
+    padding: 2rem;
+}
+
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section h1,
+.section h2 {
+    margin-bottom: 1.5rem;
+    color: #1e1e2f;
+}
+
+
+.card {
+    background: #fff;
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.subsection {
+    margin-bottom: 3rem;
+}
+
+.subsection h3 {
+    margin-bottom: 1rem;
+    color: #1e1e2f;
+}
+
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+
+.table-logbook {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.table-logbook th,
+.table-logbook td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.table-logbook th {
+    background: #1e1e2f;
+    color: #fff;
+}
+
+
+.roles,
+.profile,
+.activities,
+.xfactor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.role,
+.profile-block,
+.activity-block,
+.xfactor-item {
+    background: #f9fafb;
+    padding: 1.2rem;
+    border-radius: 10px;
+}
+
+
+.assignment {
+    margin-bottom: 2rem;
+}
+
+
+.site-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #1e1e2f;
+    color: #fff;
+    text-align: center;
+    z-index: 2000;
+}
+
+.scroll-top {
+    color: #4fd1c5;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    transition: color 0.2s;
+}
+
+.scroll-top:hover {
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .right-sidebar {
+        display: none;
+    }
+
+    main,
+    .site-footer {
+        margin-right: 0;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+}
